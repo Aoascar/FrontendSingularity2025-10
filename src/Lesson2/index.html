@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR CV control</title>
+</head>
+<body>
+    <center>
+    <h1>ЛИЧНЫЙ ЛИСТОК <br> по учету кадров</h1>
+    </center>
+    <p>
+        Общие данные
+        <form action="" method="get" name="CommonData">
+            <label for="surname">Введите вашу фамилию</label>
+            <input type="text" name="surname" id="surname" required autocomplete="on">
+            <label for="name">Введите ваше имя</label>
+            <input type="text" name="name" id="name" required>
+            
+              <fieldset>
+                <legend>Пол</legend>
+                <input type="radio" name="gender" id="male" required />
+                <label for="male">мужской</label>
+                <input type="radio" name="gender" id="female" />
+                <label for="female">женский</label>
+            </fieldset>
+            <label for="birthday">число,месяц и год рождения</label>
+            <input type="date" name="birthday" id="birthday" required>
+            <fieldset>
+                <legend>Место рождения</legend>
+                <label for="village">село</label>
+                <input type="text" name="village" id="villege" required placeholder="введите название села">
+                <label for="city">город</label>
+                <select name="city" id="city" required>
+                    <option value="Almaty">Алматы</option>
+                    <option value="Astana">Астана</option>
+                    <option value="Shymkent">Шымкент</option>
+                    <option value="Semipalatinsk">Семипалатинск</option>
+                    <option value="Karagandy">Караганды</option>
+                    <option value="Uralsk">Уральск</option>
+                    <option value="Pavlodar">Павлодар</option>
+                    <option value="Taraz">Тараз</option>  
+                 </select>
+                <label for="province">Область</label>
+                <input type="text" name="province" id="province" required placeholder="введите название области">
+                <label for="republic">Республика</label>
+                <input type="text" name="republic" id="republic" required placeholder="введите название республики">
+            </fieldset>
+            <p>
+                <label for="nationality">Национальность</label>
+                <input type="text" id="nationality" name="nationality" required autocomplete="on">
+            </p>
+            <fieldset>
+                <legend>Образование</legend>
+                <label for="education">образование</label>
+                <select name="education" id="education" required>
+                    <option value="noselect">..выберите</option>
+                    <option value="average">среднее</option>
+                    <option value="dont degree average">незаконченное среднее</option>
+                    <option value="average-special">средне-специальное</option>
+                    <option value="bachelor">бакалавриат</option>
+                    <option value="master">магистратура</option>
+                </select>
+            </fieldset>  
+            <label for="inn">ИИН</label>
+            <input type="text" name="inn" id="inn" required   size="12" minlength="12" maxlength="12" pattern="[0-9]{12}" placeholder="введите ИИН цифрами">
+            <fieldset>
+                <legend>Данные удостоверения личности</legend>
+                <label for="numberofID">Номер удостоверения личности</label>
+                <input type="text" name="numberofID" id="numberofID" required placeholder="введите номер удостоверения личности">
+                
+                <label for="dateofissue">Дата выдачи удостоверения</label>
+                <input type="date" id="dateofissue" required placeholder="введите дату выдачи удостоверения">
+                <label for="whoIssued">кем выдан</label>
+                <select name="whoIssued" id="whoIssued"required>
+                    <option value="mvd">МВД РК</option>
+                    <option value="mu">МЮ РК</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Место жительства</legend>
+                <label for="village">село</label>
+                <input type="text" name="village" id="villege" placeholder="введите название села" required>
+                <label for="city">город</label>
+                <select name="city" id="city" required>
+                    <option value="Almaty">Алматы</option>
+                    <option value="Astana">Астана</option>
+                    <option value="Shymkent">Шымкент</option>
+                    <option value="Semipalatinsk">Семипалатинск</option>
+                    <option value="Karagandy">Караганды</option>
+                    <option value="Uralsk">Уральск</option>
+                    <option value="Pavlodar">Павлодар</option>
+                    <option value="Taraz">Тараз</option>  
+                 </select>
+                <label for="province">Область</label>
+                <input type="text" name="province" id="province" placeholder="введите название области" required>
+                <label for="republic">Республика</label>
+                <input type="text" name="republic" id="republic" placeholder="введите название республики" required>
+            </fieldset>
+            <label for="phone">ВВедите свой телефон без 8 и +7</label>
+            <input type="text" minlength="10" maxlength="10" placeholder="ваш номер телефона"required>
+            <p>
+                <button type="submit">Передать</button>
+            </p>
+        </form>
+
+    </p>
+    <p>
+        <form action="" method="get" name="education">
+            <fieldset>
+                <legend>Образование, если закончили несколько заведений, передайте их по одному</legend>
+                <label for="uchrezhdenie">Название учебного заведения</label>
+                <input type="text" name="uchrezhdenie" id="uchrezhdenie" required>
+                <label for="cityOfuchrezhdenie">Город где расположено учебное заведение</label>
+                <input type="text" name="cityOfuchrezhdenie" id="cityOfuchrezhdenie" required>
+                <p>
+                <label for="yearofuchrezhdenie">Год поступления в учебное заведение</label>
+                <input type="date" name="yearofгchrezhdenie" id="yearofuchrezhdenie" required>                 
+                <label for="yearofGraduateuchrezhdenie">Год окончания учебного заведения</label>
+                <input type="date" name="yearofGraduateuchrezhdenie" id="yearofGraduateuchrezhdenie" required> 
+                <label for="yearofdontGraduateuchrezhdenie">если не окончил то с какого курса ушел</label>
+                <input type="text" name="yearofdontGraduateuchrezhdenie" id="yearofdontGraduateuchrezhdenie" > 
+                <p>
+                <label for="speciality">по какой специальности обучался</label>
+                <input type="text" name="speciality" id="speciality" placeholder="введите специальность" required>
+                <label for="specialityOfEnd">Специальность по окончании учебного заведения</label>
+                <input type="text" name="specialityOfEnd" id="specialityOfEnd" required>
+                </p>
+                <label for="numberOfDiploma">Номер диплома об окончании</label>
+                <input type="text" name="numberOfDiploma" id="numberOfDiploma" required>
+                <label for="dateOfIssue">Дата выдачи диплома</label>
+                <input type="date" name="dateofissue" id="dateOfIssue" required>     
+            </p>
+                               
+            </fieldset>
+
+            <button type="submit">Передать </button>
+        </form>
+
+        <p>
+            <form action="" method="get" name="language">
+                <fieldset>
+                    <legend>Если владеете несколькими то передавайте по одному</legend>
+                    <label for="language"> Какими иностарнными языками и языками народов СНГ владеете</label>
+                    <input type="text" name="language" id="language" required placeholder="введите язык">
+                </fieldset>
+                <button type="submit">Передать</button>
+            </form>
+            <form action="" method="get" name="academicRank">
+                <label for="academicRank">Ученое звание, ученая степень. Если несколько, передавайте по одному</label> 
+                <input type="text" name="academicRank" id="academicRank" required>
+                <button type="submit">Передать</button>
+            </form>
+            <form action="" method="get" name="scientificWorks">
+                <label for="scientificWorks">Научные труды и изобретения. Если несколько, то передавайте по одному</label> 
+                <input type="text" name="scientificWorks" id="scientificWorks" required>
+                <button type="submit">Передать</button>
+            </form>
+        </p>
+    </p>
+</body>
+</html>
